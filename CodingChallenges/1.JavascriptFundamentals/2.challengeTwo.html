@@ -1,0 +1,116 @@
+<!-- 
+Mark and John are trying to compare their BMI (Body Mass Index), which is
+calculated using the formula:
+BMI = mass / height ** 2 = mass / (height * height) (mass in kg
+and height in meters).
+Your tasks:
+1. Store Mark's and John's mass and height in variables
+2. Calculate both their BMIs using the formula (you can even implement both
+versions)
+3. Create a Boolean variable 'markHigherBMI' containing information about
+whether Mark has a higher BMI than John.
+Test data:
+§ Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95
+m tall.
+§ Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
+m tall.
+
+Your tasks:
+1. Print a nice output to the console,saying who has the higherBMI.The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example:"Mark's BMI (28.3) is higher than John's (23.9)!"
+Hint: Use an if/else statement 😉 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Coding Challenge #2</title>
+    <style>
+        body {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: goldenrod;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Coding Challenge #2</h1>
+    <p>Check the console</p>
+    <script>
+        //Data1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 tall
+        //1. Print a nice output to the console,saying who has the higherBMI. The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+        //2. Use a template literal to include the BMI values in the outputs. Example:"Mark's BMI (28.3) is higher than John's (23.9)!"
+
+        const markMass1 = 78;
+        const markHeight1 = 1.69;
+        const markBMI1 = markMass1 / markHeight1 ** 2;
+        console.log(`Mark's BMI is ${markBMI1}`); // 27.309968138370508
+
+        const johnMass1 = 92;
+        const johnHeight1 = 1.95;
+        const johnBMI1 = johnMass1 / johnHeight1 ** 2;
+        console.log(`John's BMI is ${johnBMI1}`); // 24.194608809993426
+
+        // Create a Boolean variable 'markHigherBMI1' containing information about
+        // whether Mark has a higher BMI than John.
+
+        const markHigherBMI1 = markBMI1 > johnBMI1;
+        console.log(`Mark has higher BMI than John's? - ${markHigherBMI1}`); // true 
+
+        const johnHigherBMI1 = johnBMI1 > markBMI1;
+        console.log(`John has higher BMI than Mark's? - ${johnHigherBMI1}`); // false
+
+        if (markHigherBMI1 > johnHigherBMI1) {
+            console.log(`Mark's BMI ${markBMI1} is higher than John's ${johnBMI1}!`);
+        } else {
+            console.log(`Mark's BMI ${markBMI1} is lower than John's ${johnBMI1}!`);
+        }
+
+        // Output: Mark's BMI 27.309968138370508 is higher than John's 24.194608809993426!
+
+
+        // Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 tall.
+        const markMass2 = 95;
+        const markHeight2 = 1.88;
+        const markBMI2 = markMass2 / markHeight2 ** 2;
+        console.log(`Mark's BMI is ${markBMI2}`); // 26.87867813490267
+
+        const johnMass2 = 85;
+        const johnHeight2 = 1.76;
+        const johnBMI2 = johnMass2 / johnHeight2 ** 2;
+        console.log(`John's BMI is ${johnBMI2}`); // 27.44059917355372
+
+
+        // Create a Boolean variable 'markHigherBMI2' containing information about
+        // whether Mark has a higher BMI than John.
+
+        const markHigherBMI2 = markBMI2 > johnBMI2;
+        console.log(`Mark has higher BMI than John's? - ${markHigherBMI2}`); // false
+
+        const johnHigherBMI2 = johnBMI2 > markBMI2;
+        console.log(`John has higher BMI than Mark's? - ${johnHigherBMI2}`); // true
+
+        if (markHigherBMI2 > johnHigherBMI2) {
+            console.log(`Mark's BMI ${markBMI2} is higher than John's ${johnBMI2}!`);
+        } else {
+            console.log(`Mark's BMI ${markBMI2} is lower than John's ${johnBMI2}!`);
+        }
+
+        // Output: Mark's BMI 26.87867813490267 is lower than John's 27.44059917355372!
+    </script>
+</body>
+
+</html>

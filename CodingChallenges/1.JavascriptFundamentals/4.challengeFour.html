@@ -1,0 +1,67 @@
+<!-- 
+    Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+Tasks:
+1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+
+2. Print a string to the console containing the bill value,the tip,and the final value (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 316.25”
+
+Test data:
+§ Data 1: Test for bill values 275, 40 and 430 
+Hints:
+§ To calculate 20% of a value, simply multiply it by 20/100 = 0.2 
+§ Value X is between 50 and 300, if it's>= 50 && <= 300
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Coding Challenge #4</title>
+    <style>
+        body {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: goldenrod;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Coding Challenge #4</h1>
+    <p>Check the console</p>
+    <script>
+        // Calculate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+        let tip15Percent = 0.15; // 15%
+        let tip20Percent = 0.2 // 20%
+        //Test Data: Test for bill values 275, 40 and 430
+        let bill1 = 275;
+        let tip1 = (bill1 >= 50 && bill1 <= 300) ? (bill1 * tip15Percent) : (bill1 * tip20Percent);
+        // Print a string to the console containing the bill value,the tip,and the final value (bill + tip).
+        console.log(`The bill was ${bill1}, the tip was ${tip1}, and the total value was ${bill1 + tip1}`);
+
+        let bill2 = 40;
+        let tip2 = (bill2 >= 50 && bill2 <= 300) ? (bill2 * tip15Percent) : (bill2 * tip20Percent);
+        // Print a string to the console containing the bill value,the tip,and the final value (bill + tip).
+        console.log(`The bill was ${bill2}, the tip was ${tip2}, and the total value was ${bill2 + tip2}`);
+
+        let bill3 = 430;
+        let tip3 = (bill3 >= 50 && bill3 <= 300) ? (bill3 * tip15Percent) : (bill3 * tip20Percent);
+        // Print a string to the console containing the bill value,the tip,and the final value (bill + tip).
+        console.log(`The bill was ${bill3}, the tip was ${tip3}, and the total value was ${bill3 + tip3}`);
+    </script>
+</body>
+
+</html>
