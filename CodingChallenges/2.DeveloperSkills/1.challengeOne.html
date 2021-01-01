@@ -1,0 +1,68 @@
+<!-- 
+Given an array of forecasted maximum temperatures, the thermometer displays a string with the given temperatures. 
+Example: [17, 21, 23] will print "... 17°C in 1 days ... 21°C in 2 days ... 23°C in 3 days ..."
+Your tasks:
+1. Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console. 
+Try it with both test datasets.
+2. Use the problem-solving framework: Understand the problem and break it up into sub-problems!
+Test data:
+§ Data 1: [17, 21, 23]
+§ Data2:[12,5,-5,0,4]
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Coding Challenge #1</title>
+    <style>
+        body {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: goldenrod;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Coding Challenge #1</h1>
+    <p>Check the console</p>
+<script>
+    // Understanding the problem
+    // - Array transformed to string, separated by ... 
+    // - What is the x days? Ans: index + 1
+
+    // Breaking up into sub problems 
+    // - Transform array into string  
+    // - Transform each element to string with °C
+    // - Strings need to contain day (index + 1)  
+    // - Add ... between elements and start and end of string  
+    // - Log string to console
+    const data1 = [17, 21, 23];
+    const data2 = [12, 5, -5, 0, 4];
+
+    console.log(`...${data1[0]}°c ...${data1[1]}°c ...${data1[2]}°c`);
+    
+    const printForecast = function(arr) {
+        let str = '';
+        for(let i = 0; i < arr.length; i++) {
+            str += `${arr[i]}°c in ${i + 1} days ... `;
+        }
+        console.log('...' + str);
+    }
+    printForecast(data1);
+</script>
+</body>
+
+</html>
