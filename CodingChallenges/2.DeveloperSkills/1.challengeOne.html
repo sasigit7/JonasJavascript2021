@@ -11,58 +11,56 @@ Test data:
  -->
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Coding Challenge #1</title>
     <style>
-        body {
-            width: 500px;
-            margin: 0 auto;
-        }
+      body {
+        width: 500px;
+        margin: 0 auto;
+      }
 
-        h1 {
-            text-align: center;
-            background-color: goldenrod;
-            padding: 15px;
-            border-radius: 10px;
-        }
+      h1 {
+        text-align: center;
+        background-color: goldenrod;
+        padding: 15px;
+        border-radius: 10px;
+      }
 
-        p {
-            text-align: center;
-        }
+      p {
+        text-align: center;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Coding Challenge #1</h1>
     <p>Check the console</p>
-<script>
-    // Understanding the problem
-    // - Array transformed to string, separated by ... 
-    // - What is the x days? Ans: index + 1
+    <script>
+      // Understanding the problem
+      // - Array transformed to string, separated by ...
+      // - What is the x days? Ans: index + 1
 
-    // Breaking up into sub problems 
-    // - Transform array into string  
-    // - Transform each element to string with °C
-    // - Strings need to contain day (index + 1)  
-    // - Add ... between elements and start and end of string  
-    // - Log string to console
-    const data1 = [17, 21, 23];
-    const data2 = [12, 5, -5, 0, 4];
+      // Breaking up into sub problems
+      // - Transform array into string
+      // - Transform each element to string with °C
+      // - Strings need to contain day (index + 1)
+      // - Add ... between elements and start and end of string
+      // - Log string to console
+      const data1 = [17, 21, 23];
+      const data2 = [12, 5, -5, 0, 4];
 
-    console.log(`...${data1[0]}°c ...${data1[1]}°c ...${data1[2]}°c`);
-    
-    const printForecast = function(arr) {
-        let str = '';
-        for(let i = 0; i < arr.length; i++) {
-            str += `${arr[i]}°c in ${i + 1} days ... `;
+      console.log(`...${data1[0]}°c ...${data1[1]}°c ...${data1[2]}°c`);
+
+      const printForecast = function (arr) {
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+          str += `${arr[i]}°c in ${i + 1} days ... `;
         }
-        console.log('...' + str);
-    }
-    printForecast(data1);
-</script>
-</body>
-
+        console.log("..." + str);
+      };
+      printForecast(data1);
+    </script>
+  </body>
 </html>
