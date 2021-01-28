@@ -7,6 +7,8 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
 let score = 20; // score variable initial value is 20
 
+let highscore = 0; // initial high score is always greater than 0
+
 document.querySelector('.check').addEventListener(
   // Select check button
   'click',
@@ -30,6 +32,11 @@ document.querySelector('.check').addEventListener(
       document.querySelector('body').style.backgroundColor = '#60b347';
       // Change the width of the score when player wins the game
       document.querySelector('.number').style.width = '30rem';
+      // Set the highscore if the current score is higher than the highscore
+      if (score > highscore) {
+        highscore = score;
+        document.querySelector('.highscore').textContent = highscore;
+      }
     } else if (guess > secretNumber) {
       // If player's guessing number is higher than the secret number
       if (score > 1) {
@@ -57,18 +64,14 @@ document.querySelector('.check').addEventListener(
 );
 
 // Reset functionality, so that player can make a new guess
-document.querySelector('.again').addEventListener(
-  'click',
-  function () {
-    score = 20;
-    secretNumber = Math.trunc(Math.random() * 20) + 1;
+document.querySelector('.again').addEventListener('click', function () {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
 
-    document.querySelector('.message').textContent = 'Start guessing...';
-    document.querySelector('.score').textContent = score;
-    document.querySelector('.number').textContent = '?';
-    document.querySelector('.guess').value = '';
-    document.querySelector('body').style.backgroundColor = "#222";
-    document.querySelector('.number').style.width = "15rem";
-
-  }
-);
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = '';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+});
