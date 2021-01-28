@@ -1,4 +1,4 @@
-# JonasJavascript2020
+# JonasJavascript2021
 The Complete JavaScript Course 2021: From Zero to Expert
 
 Following Topics are covered in this amazing course:
