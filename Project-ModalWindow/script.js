@@ -32,3 +32,19 @@ btnCloseModal.addEventListener("click", closeModal);
 
 // On clicking outside of the modal, the modal should be hidden and the overlay will be hidden
 overlay.addEventListener("click", closeModal);
+
+// Responding to keyboard events  (Global events)
+document.addEventListener("keydown", function(e) {
+  // console.log("A key was pressed"); // doesn't show which key was pressed
+  //console.log(e); // Shows all the core information of the pressed key 
+ // console.log(e.key); // Shows which key was pressed on the console
+ if(e.key === 'Escape') { // if pressed key was equal to 'Escape'
+ //  if(e.key === 'Escape' && !modal.classList.contains('hidden')) { // This will work too  
+  // console.log('Escape was pressed'); // then execute this 
+  // close a visible modal when Escape button is pressed
+  // modal.classList.add('hidden');
+  // overlay.classList.add('hidden');
+  closeModal(); // call close modal function
+}
+
+});
