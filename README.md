@@ -13,3 +13,13 @@ Following Topics are covered in this amazing course:
 - How to architect your code using flowcharts and common patterns
 - Practice skills with 50+ challenges and assignments 
 - Build 6 beautiful real-world projects 
+
+<p align="center"> Live Link: <a href="https://guess-my-num.netlify.app/" alt="GuessMyNumber"/>Guess My Number</a></p>
+
+<img src="https://user-images.githubusercontent.com/24832458/106370216-d4483400-634f-11eb-8058-a9b6f24b4bb6.png" width="50%"></img><img src="https://user-images.githubusercontent.com/24832458/106370217-d5796100-634f-11eb-8f01-d26dc880e2e4.png" width="50%"></img> 
+
+<hr>
+
+<p align="center"> Live Link: <a href="https://modal-popup.netlify.app/" alt="ModalWindow"/>Modal Window</a></p>
+
+<img src="https://user-images.githubusercontent.com/24832458/106370374-4ff6b080-6351-11eb-992e-6bad35ad04aa.png" width="50%"></img><img src="https://user-images.githubusercontent.com/24832458/106370376-51c07400-6351-11eb-90cb-b0d36f7602c8.png" width="50%"></img> 
