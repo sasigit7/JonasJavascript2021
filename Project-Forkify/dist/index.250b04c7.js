@@ -485,7 +485,7 @@ var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 var _urlImgIconsSvgDefault = _parcelHelpers.interopDefault(_urlImgIconsSvg);
 require('core-js/stable');
 require('regenerator-runtime/runtime');
-console.log(_urlImgIconsSvgDefault.default);
+// console.log(icons);
 const recipeContainer = document.querySelector('.recipe');
 const timeout = function (s) {
   return new Promise(function (_, reject) {
@@ -510,9 +510,13 @@ const renderSpinner = function (parentEl) {
 };
 const showRecipe = async function () {
   try {
+    const id = window.location.hash.slice(1);
+    // console.log(id);
+    if (!id) return;
+    // guard class
     // 1) Loading Recipe
     renderSpinner(recipeContainer);
-    const res = await fetch('https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886');
+    const res = await fetch('https://forkify-api.herokuapp.com/api/v2/recipes/${id}');
     const data = await res.json();
     if (!res.ok) throw new Error(`${data.message} (${res.status})`);
     // console.log(res, data);
@@ -622,7 +626,11 @@ const showRecipe = async function () {
     alert(err);
   }
 };
-showRecipe();
+// showRecipe();
+// Listening for load and hashchange events
+// window.addEventListener('hashchange', showRecipe);
+// window.addEventListener('load', showRecipe);
+['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
 
 },{"url:../img/icons.svg":"5usAu","core-js/stable":"1PFvP","regenerator-runtime/runtime":"62Qib","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5usAu":[function(require,module,exports) {
 module.exports = require('./bundle-url').getBundleURL() + require('./relative-path')("30Yg2", "7v2qO")
